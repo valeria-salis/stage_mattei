@@ -19,7 +19,9 @@ class Calcolatore(object):
         raise NotImplementedError()
 
     def calcola_minimo(self, colonna):
-        raise NotImplementedError()
+        if colonna in c:
+		vmin = min(colonna)
+        print vmin
 
     def calcola_media(self, colonna):
         raise NotImplementedError()
