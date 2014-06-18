@@ -15,5 +15,17 @@ class Calcolatore(object):
                     if (colonne_accettate and k in colonne_accettate) or not colonne_accettate:
                         self.datifile[k].append(float(v))
 
-         
+    def calcola_massimo(self, colonna):
+        raise NotImplementedError()
 
+    def calcola_minimo(self, colonna):
+        raise NotImplementedError()
+
+    def calcola_media(self, colonna):
+        raise NotImplementedError()
+
+    def stampa_calcoli(self, filename):
+        """
+        Per ogni colonna, calcola massimo, minimo e media e stampate il tutto su un file
+        """
+        raise NotImplementedError()
