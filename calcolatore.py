@@ -16,7 +16,9 @@ class Calcolatore(object):
                         self.datifile[k].append(float(v))
 
     def calcola_massimo(self, colonna):
-        raise NotImplementedError()
+        if colonna in c.fieldnames:
+            max1 = max(colonna)
+	print max1
 
     def calcola_minimo(self, colonna):
         raise NotImplementedError()
