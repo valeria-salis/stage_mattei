@@ -31,5 +31,4 @@ def main():
     t=carica(sys.argv[1])
     elabora(t)
     
-main ()
 
