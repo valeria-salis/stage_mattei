@@ -16,7 +16,7 @@ class Calcolatore(object):
                         self.datifile[k].append(float(v))
 
     def calcola_massimo(self, colonna):
-        if colonna in c.fieldnames:
+        if colonna in self.datifile:
             vmax = max(colonna)
 		else:
 			raise ValueError()
@@ -25,11 +25,11 @@ class Calcolatore(object):
 	
 
     def calcola_minimo(self, colonna):
-        if colonna in c:
-		vmin = min(colonna)
-		elif not colonna in c:
-		raise ValueError ()
-	return vmin 
+        if colonna in self.datifile:
+		    vmin = min(colonna)
+		else:
+		    raise ValueError ()
+	    return vmin 
 
     def calcola_media(self, colonna):
 
