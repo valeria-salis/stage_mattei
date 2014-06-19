@@ -21,10 +21,12 @@ class Calcolatore(object):
     def calcola_minimo(self, colonna):
         if colonna in c:
 		vmin = min(colonna)
-        print vmin
+	elif not colonna in c:
+		raise ValueError ()
+	return vmin 
 
     def calcola_media(self, colonna):
-        raise NotImplementedError()
+        
 
     def stampa_calcoli(self, filename):
         """
