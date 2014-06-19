@@ -32,13 +32,12 @@ class Calcolatore(object):
 	return vmin 
 
     def calcola_media(self, colonna):
-
-			if colonna in c.fieldnames:
-			somma = sum(colonna)		
-			elif not colonna in c.fieldnames:
-				raise ValueError()
-			media1 = float(somma) / len(colonna)
-		return media1
+	if colonna in self.datifile:
+	    somma = sum(colonna)		
+	else:
+	    raise ValueError()
+	media1 = float(somma) / len(colonna)
+        return media1
 
 
     def stampa_calcoli(self, filename):
