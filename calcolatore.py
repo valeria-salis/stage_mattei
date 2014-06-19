@@ -17,14 +17,23 @@ class Calcolatore(object):
 
     def calcola_massimo(self, colonna):
         if colonna in c.fieldnames:
-            max1 = max(colonna)
-	print max1
+            vmax = max(colonna)
+			elif not colonna in c.fieldnames:
+				raise ValueError()
+		return max1
+			
+	
 
     def calcola_minimo(self, colonna):
         raise NotImplementedError()
 
     def calcola_media(self, colonna):
-        raise NotImplementedError()
+			if colonna in c.fieldnames:
+			somma = sum(colonna)		
+			elif not colonna in c.fieldnames:
+				raise ValueError()
+			media1 = float(somma) / len(colonna)
+		return media1
 
     def stampa_calcoli(self, filename):
         """
