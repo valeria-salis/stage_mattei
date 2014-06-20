@@ -17,24 +17,24 @@ class Calcolatore(object):
 
     def calcola_massimo(self, colonna):
         if colonna in self.datifile:
-            vmax = max(datifile[colonna])
+            vmax = max(self.datifile[colonna])
         else:
             raise ValueError()
         return vmax
 
     def calcola_minimo(self, colonna):
         if colonna in self.datifile:
-            vmin = min(datifile[colonna])
+            vmin = min(self.datifile[colonna])
         else:
             raise ValueError ()
         return vmin
 
     def calcola_media(self, colonna):
         if colonna in self.datifile:
-            somma = sum(datifile[colonna])
+            somma = sum(self.datifile[colonna])
         else:
             raise ValueError()
-        media1 = float(somma) / len(colonna)
+        media1 = float(somma) / len(self.datifile[colonna])
         return media1
 
 
