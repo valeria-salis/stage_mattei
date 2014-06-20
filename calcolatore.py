@@ -39,7 +39,27 @@ class Calcolatore(object):
 
 
     def stampa_calcoli(self, filename):
-        """
-        Per ogni colonna, calcola massimo, minimo e media e stampate il tutto su un file
-        """
+        statistiche = open(filename, 'w')
+        fieldnames = ["nome_colonna","massimo","minimo", "media"]
+        csvwriter = csv.DictWriter(statistiche, delimiter = "\t", fieldnames=fieldnames)
+        for k, v in self.datifile.iteritems():
+            row = {
+                "nome_colonna" : k,
+                "massimo" : self.calcola_massimo(k),
+                "minimo" : self.calcola_minimo(k),
+                "media" : self.calcola_media(k)
+            }
+            csvwriter.writerow(row)
+        file.close()
+
+
+
+
+
+
+
+
+
+
+
         raise NotImplementedError()
