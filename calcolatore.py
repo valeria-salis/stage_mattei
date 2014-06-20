@@ -42,6 +42,7 @@ class Calcolatore(object):
         statistiche = open(filename, 'w')
         fieldnames = ["nome_colonna","massimo","minimo", "media"]
         csvwriter = csv.DictWriter(statistiche, delimiter = "\t", fieldnames=fieldnames)
+        csvwriter.writeheader()
         for k, v in self.datifile.iteritems():
             row = {
                 "nome_colonna" : k,
@@ -50,4 +51,4 @@ class Calcolatore(object):
                 "media" : self.calcola_media(k)
             }
             csvwriter.writerow(row)
-        file.close()
+        statistiche.close()
