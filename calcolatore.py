@@ -51,15 +51,3 @@ class Calcolatore(object):
             }
             csvwriter.writerow(row)
         file.close()
-
-
-
-
-
-
-
-
-
-
-
-        raise NotImplementedError()
