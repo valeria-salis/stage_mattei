@@ -1,0 +1,16 @@
+Per poter caricare la classe Calcolatore all'interno dei vostri
+programmi dovete fare in modo che Python sia in grado di
+riconoscerla. Per fare questo la strada più rapida è caricarla
+all'interno del PYTHONPATH, ovvero tra i percorsi sul disco rigido che
+Python deve leggere per cercare i moduli da utilizzare all'interno dei
+vari programmi.
+
+Per fare questo dovrete usare il comando
+
+export PYTHONPATH=path_del_modulo
+
+dove path_del_modulo è la directory in cui avete salvato il vostro
+file "calcolatore.py".
+Un esempio è il seguente
+
+export PYTHONPATH=~/stage_mattei/
